@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   metadataBase: new URL('https://postgres-prisma.vercel.app'),
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>{children}</body>
+      <Analytics />
     </html>
   )
 }
